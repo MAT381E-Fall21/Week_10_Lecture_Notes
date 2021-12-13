@@ -614,8 +614,8 @@ bitcoin_tbl_graph %&gt;%
 #sort the nodes by their degree (in descending form)
 node_degree &lt;- bitcoin_tbl_graph %&gt;% 
                 activate(nodes) %&gt;% 
-                mutate(degree = centrality_degree()) %&gt;% 
-                as_tibble() %&gt;% 
+                mutate(degree = centrality_degree()) %&gt;%  #returns degree column in an active node table
+                as_tibble() %&gt;% #get node table
                 arrange(-degree)
 
 #View(node_degree) 
@@ -632,20 +632,47 @@ bitcoin_tbl_graph %&gt;%
   activate(edges) %&gt;% 
   filter(weight == 1) %&gt;% #find who gets 1
   as_tibble() %&gt;%
-  count(to) %&gt;%  #count how many 1's received that person
-  View()
+  count(to) #%&gt;%  #count how many 1's received that person
+  #View()
 ```
 
 ---
--  If we want to filter just edges from ID 34, we can use the `filter()` function from `dplyr` and create a new graph object with `as_tbl_graph()`:
+-  If we want to filter just edges from ID 1, we can use the `filter()` function from `dplyr` and create a new graph object with `as_tbl_graph()`:
 
 
 ```r
-trader_34 &lt;- bitcoin_tbl_graph %&gt;% 
+trader_1 &lt;- bitcoin_tbl_graph %&gt;% 
              activate(edges) %&gt;% 
-             filter(from == 34) %&gt;% 
+             filter(from == 1) %&gt;% 
              as_tbl_graph() 
 #View(trader_34)
+```
+
+
+```r
+trader_1 %&gt;% 
+   as_tibble() #%&gt;%
+```
+
+```
+#&gt; # A tibble: 195 × 3
+#&gt;     from    to weight
+#&gt;    &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
+#&gt;  1     1    41    0.1
+#&gt;  2     1    12    0.1
+#&gt;  3     1     6    0.9
+#&gt;  4     1    11    0.2
+#&gt;  5     1     2    0.3
+#&gt;  6     1    26    0.2
+#&gt;  7     1    31    0.1
+#&gt;  8     1    29    0.2
+#&gt;  9     1    45    0.1
+#&gt; 10     1    20    0.6
+#&gt; # … with 185 more rows
+```
+
+```r
+    #View() 
 ```
 
 ---
@@ -734,7 +761,7 @@ bitcoin_tbl_graph %&gt;%
 ]
 
 .panel[.panel-name[Output]
-![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
+![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
 ]
 ]
   
@@ -769,7 +796,7 @@ bitcoin_tbl_graph %&gt;%
 ]
 
 .panel[.panel-name[Output]
-![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
 ]
 ]
 
@@ -796,7 +823,7 @@ bitcoin_tbl_graph %&gt;%
 ]
 
 .panel[.panel-name[Output]
-![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
+![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
 
 ]
 ]

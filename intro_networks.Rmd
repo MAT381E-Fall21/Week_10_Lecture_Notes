@@ -124,7 +124,7 @@ knitr::include_graphics('images/example.png')
 - "Traditional modeling approaches in this realm have treated **workers as narrowly linked to specific jobs**. 
 - "In the real world, however, **jobs and sectors are linked**. <span style="color:red">Displaced workers can often transition to another job or sector requiring similar skills.</span>"
 - "In this way, **job markets are much like ecosystems, where organisms are linked in a complex web of relationships**.
-- "The authors modeled the relationships between jobs in cities across the United States. They predicted that **cities with jobs connected by overlapping skills** and geography would fare better in the face of economic shock than those without such networks."
+- "The authors modeled the relationships between jobs in cities across the United States. They predicted that **cities with jobs connected by overlapping skills and geography** would fare better in the face of economic shock than those without such networks."
 - "They found that while cities of similar sizes would be affected similarly in the beginning phases of automation shocks, those with **well-connected job networks** would provide **better opportunities** for displaced workers to find other jobs." 
 - "This provides a buffer against widespread unemployment, and in some cases even leads to **more jobs** being created in the aftermath of the initial automation shock."
 - A city like Burlington, Vermont, where job connectivity is high, would fare much better than Bloomington, Indiana, a similar-sized city where job connectivity is low.

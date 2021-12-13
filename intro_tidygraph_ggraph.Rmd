@@ -499,9 +499,8 @@ trader_1 <- bitcoin_tbl_graph %>%
 
 ```{r}
 trader_1 %>% 
-  activate(nodes) %>% 
    as_tibble() %>%
-  View() 
+    View() 
 ```
 
 ---
