@@ -4,7 +4,7 @@
     <title>MAT381E-Week 10: Creating and Visualizing Networks</title>
     <meta charset="utf-8" />
     <meta name="author" content="Gül İnan" />
-    <meta name="date" content="2021-12-12" />
+    <meta name="date" content="2021-12-13" />
     <script src="intro_tidygraph_ggraph_files/header-attrs-2.11/header-attrs.js"></script>
     <link href="intro_tidygraph_ggraph_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="intro_tidygraph_ggraph_files/fabric-4.3.1/fabric.min.js"></script>
@@ -28,7 +28,7 @@ class: left, middle, my-title, title-slide
 # MAT381E-Week 10: Creating and Visualizing Networks
 ### Gül İnan
 ### Department of Mathematics<br/>Istanbul Technical University
-### December 12, 2021
+### December 13, 2021
 
 ---
 
@@ -136,8 +136,14 @@ for `\(\mathcal{G}_{manage}\)` as follows:
 - Within the adjacency matrix a **1 indicates** that there is a **connection between the vertices**, and a **0 indicates no connection**. 
 - As an example, using our graph  `\(\mathcal{G}_{work}\)`  the adjacency matrix would look like this:
 
-&lt;img src="images/adj_matrix1.png" width="50%" height="50%" style="display: block; margin: auto;" /&gt;
 
+.pull-left[
+&lt;img src="images/gwork.png" width="100%" height="100%" /&gt;
+]
+
+.pull-right[
+&lt;img src="images/adj_matrix1.png" width="100%" height="100%" /&gt;
+]  
 ---
 #### How to create Network objects in R? 
 
@@ -728,7 +734,7 @@ bitcoin_tbl_graph %&gt;%
 ]
 
 .panel[.panel-name[Output]
-![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 ]
 ]
   
@@ -763,7 +769,7 @@ bitcoin_tbl_graph %&gt;%
 ]
 
 .panel[.panel-name[Output]
-![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
 ]
 ]
 
@@ -790,7 +796,7 @@ bitcoin_tbl_graph %&gt;%
 ]
 
 .panel[.panel-name[Output]
-![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
+![](intro_tidygraph_ggraph_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 
 ]
 ]

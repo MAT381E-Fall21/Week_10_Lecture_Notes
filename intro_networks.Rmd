@@ -59,7 +59,7 @@ class: left
 
 class: center, middle
 
-Internet - Billions of Webpages
+Internet - the largest engineering project
 
 <iframe width="700" height="500" src="https://www.youtube.com/embed/DdaElt6oP6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -76,11 +76,11 @@ knitr::include_graphics('images/internet.png')
 ---
 
 # Networks
-- **Network analysis** is a suite of tools/methods developed to understand and analyze network graphs where **vertices** (nodes) connected through  **edges**.
-- With an example from Facebook, we can consider **vertices** are **users** and **edges** are **friendships**.
+- **Network analysis** is a suite of tools/methods developed to understand and analyze graphs in which several **vertices** (nodes) are connected each other through  **edges**.
+- With an example from Facebook network, we can consider **vertices** are **users** in the network and **edges** are links denoting **friendships**.
 
 
-```{r echo=FALSE, out.height='50%', out.width='50%', fig.align='center'}
+```{r echo=FALSE, out.height='40%', out.width='40%', fig.align='center'}
 knitr::include_graphics('images/fb.jpeg')  
 ```
 ---
@@ -122,7 +122,7 @@ knitr::include_graphics('images/example.png')
 #### Example continu'ed
 - "Economists, policymakers, city planners, and companies have a strong interest in determining what factors contribute to healthy job markets, including what factors can help promote faster recovery after a shock, such as a major recession or the current Covid-19 pandemic." 
 - "Traditional modeling approaches in this realm have treated **workers as narrowly linked to specific jobs**. 
-- "In the real world, however, **jobs and sectors are linked**. Displaced workers can often transition to another job or sector requiring similar skills."
+- "In the real world, however, **jobs and sectors are linked**. <span style="color:red">Displaced workers can often transition to another job or sector requiring similar skills.</span>"
 - "In this way, **job markets are much like ecosystems, where organisms are linked in a complex web of relationships**.
 - "The authors modeled the relationships between jobs in cities across the United States. They predicted that **cities with jobs connected by overlapping skills** and geography would fare better in the face of economic shock than those without such networks."
 - "They found that while cities of similar sizes would be affected similarly in the beginning phases of automation shocks, those with **well-connected job networks** would provide **better opportunities** for displaced workers to find other jobs." 

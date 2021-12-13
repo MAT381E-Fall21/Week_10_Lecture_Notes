@@ -145,10 +145,18 @@ knitr::include_graphics('images/gmap.png')
 - Within the adjacency matrix a **1 indicates** that there is a **connection between the vertices**, and a **0 indicates no connection**. 
 - As an example, using our graph  $\mathcal{G}_{work}$  the adjacency matrix would look like this:
 
-```{r echo=FALSE, out.height='50%', out.width='50%', fig.align='center'}
+
+.pull-left[
+```{r echo=FALSE, out.height='100%', out.width='100%'}
+knitr::include_graphics('images/gwork.png')  
+```
+]
+
+.pull-right[
+```{r echo=FALSE, out.height='100%', out.width='100%'}
 knitr::include_graphics('images/adj_matrix1.png')  
 ```
-
+]  
 ---
 #### How to create Network objects in R? 
 
@@ -457,8 +465,8 @@ bitcoin_tbl_graph %>%
 #sort the nodes by their degree (in descending form)
 node_degree <- bitcoin_tbl_graph %>% 
                 activate(nodes) %>% 
-                mutate(degree = centrality_degree()) %>% 
-                as_tibble() %>% 
+                mutate(degree = centrality_degree()) %>%  #returns degree column in an active node table
+                as_tibble() %>% #get node table
                 arrange(-degree)
 
 #View(node_degree) 
@@ -479,14 +487,21 @@ bitcoin_tbl_graph %>%
 ```
 
 ---
--  If we want to filter just edges from ID 34, we can use the `filter()` function from `dplyr` and create a new graph object with `as_tbl_graph()`:
+-  If we want to filter just edges from ID 1, we can use the `filter()` function from `dplyr` and create a new graph object with `as_tbl_graph()`:
 
 ```{r}
-trader_34 <- bitcoin_tbl_graph %>% 
+trader_1 <- bitcoin_tbl_graph %>% 
              activate(edges) %>% 
-             filter(from == 34) %>% 
+             filter(from == 1) %>% 
              as_tbl_graph() 
 #View(trader_34)
+```
+
+```{r}
+trader_1 %>% 
+  activate(nodes) %>% 
+   as_tibble() %>%
+  View() 
 ```
 
 ---
