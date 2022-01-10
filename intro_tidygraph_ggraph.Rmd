@@ -482,8 +482,8 @@ bitcoin_tbl_graph %>%
   activate(edges) %>% 
   filter(weight == 1) %>% #find who gets 1
   as_tibble() %>%
-  count(to) %>%  #count how many 1's received that person
-  View()
+  count(to) #%>%  #count how many 1's received that person
+  #View()
 ```
 
 ---
@@ -499,8 +499,8 @@ trader_1 <- bitcoin_tbl_graph %>%
 
 ```{r}
 trader_1 %>% 
-   as_tibble() %>%
-    View() 
+   as_tibble() #%>%
+    #View() 
 ```
 
 ---
